@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "298818128291",
+    "project_id": "bloctutorial-7dd1d",
+    "storage_bucket": "bloctutorial-7dd1d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:298818128291:android:99d560a0d04cb441dbf216",
+        "android_client_info": {
+          "package_name": "com.example.blocktutorial"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "298818128291-qqgiu50entfp6pr0ou28qpab5q84btoq.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.blocktutorial",
+            "certificate_hash": "f5da9347471391a4d6846557b638c64f7752d969"
+          }
+        },
+        {
+          "client_id": "298818128291-25tvcj9pekbb65md6aihsqok2050r9io.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCBK66wcPorqTSrI5Z2VRDA50Vk2BVckKA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "298818128291-25tvcj9pekbb65md6aihsqok2050r9io.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

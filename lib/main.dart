@@ -1,18 +1,23 @@
-import 'package:blocktutorial/bloc/internet_bloc.dart';
-import 'package:blocktutorial/cubit_example.dart';
-import 'package:blocktutorial/cubits/internet_cubit.dart';
-import 'package:blocktutorial/home_screen.dart';
-import 'package:blocktutorial/routes/routes.dart';
-import 'package:blocktutorial/sign_in/bloc/signin_bloc.dart';
-import 'package:blocktutorial/sign_in/sign_in_screen.dart';
+import 'dart:math';
+
+import 'package:blocktutorial/api_eample/data/models/PostModel.dart';
+import 'package:blocktutorial/api_eample/logic/cubits/post_cubit/post_cubit.dart';
+import 'package:blocktutorial/api_eample/presentation/screens/home_screen_api.dart';
+import 'package:blocktutorial/api_eample/repositories/pots_repositories.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
+
+  // PostRepository postRepository = PostRepository();
+  // List<PostModel> postModels = await postRepository.fetchPost();
+
   runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
+
   const MyApp({super.key});
 
   // This widget is the root of your application.
@@ -28,9 +33,19 @@ class MyApp extends StatelessWidget {
     //     home: SignInExample(),
     //   ),
     // );
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-        onGenerateRoute: Routes.onGenerateRoute,initialRoute: "/first",
+
+
+    // return MaterialApp(
+    //   debugShowCheckedModeBanner: false,
+    //     onGenerateRoute: Routes.onGenerateRoute,initialRoute: "/first",
+    // );
+
+    return BlocProvider(
+      create: (context) => PostCubit(),
+      child: MaterialApp(
+        debugShowCheckedModeBanner: false,
+        home: HomeScreenApi(),
+      ),
     );
   }
 }
