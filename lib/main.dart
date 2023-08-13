@@ -20,6 +20,10 @@ import 'package:blocktutorial/example/examplebloc.dart';
 import 'package:blocktutorial/example/examplescreen.dart';
 import 'package:blocktutorial/example/textexample/text_bloc.dart';
 import 'package:blocktutorial/example/textexample/text_ui.dart';
+import 'package:blocktutorial/sign_in/bloc/signin_bloc.dart';
+import 'package:blocktutorial/sign_in/welcome_screen.dart';
+import 'package:blocktutorial/signin/signinnew_bloc.dart';
+import 'package:blocktutorial/signin/signinnew_ui.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -106,10 +110,17 @@ class MyApp extends StatelessWidget {
     //   ),
     // );
 
+    // return BlocProvider(
+    //   create: (context) => SignInBloc(),
+    //   child: MaterialApp(
+    //     home: WelcomeScreen(),
+    //   ),
+    // );
+
     return BlocProvider(
-      create: (context) => InternetBloc(),
+      create: (context) => SigninnewBloc(),
       child: MaterialApp(
-        home: HomeScreen(),
+        home: SignInNewScreen(),
       ),
     );
   }
